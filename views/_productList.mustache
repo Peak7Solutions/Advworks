@@ -1,0 +1,42 @@
+ <div class="row">
+  <div class="col text-center">
+    <h1>Product List</h1>
+  </div>
+</div>
+<table class="mt-2 table table-striped table-bordered">
+    <thead>
+        <tr>
+            <th>Actions</th>
+            <th>Product ID</th>
+            <th>Product Name</th>
+            <th>Product Number</th>
+            <th>Color</th>
+            <th class="text-end">Cost</th>
+            <th class="text-end">Price</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#data}}
+            <tr>
+                <td>
+                    <a href="product/{{productID}}" class="btn btn-primary">Edit</a>
+                </td>
+                <td>{{productID}}</td>
+                <td>{{name}}</td>
+                <td>{{productNumber}}</td>
+                <td>{{color}}</td>
+                <td class="text-end">{{costAsCurrency}}</td>
+                <td class="text-end">{{priceAsCurrency}}</td>
+                <td>
+                    <a 
+                        href="product/delete/{{productID}}" 
+                        onclick="return confirm('Delete this Product?');"
+                        class="btn btn-danger">
+                        Delete
+                    </a>
+                </td>
+            </tr>
+        {{/data}}
+    </tbody>
+</table>

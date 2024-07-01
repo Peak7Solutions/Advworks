@@ -1,0 +1,41 @@
+<form class="mt-4" action="/product/search" method="get">
+    <div class="card">
+        <div class="card-header bg-primary text-light">
+            <h5 class="card-title">
+                Search for Products
+            </h5>
+        </div>
+        <div class="card-body">
+            <div class="form-group">
+                <label for="searchName">
+                    Product Name (or partial)
+                </label>
+                <input type="text"
+                    id="searchName"
+                    name="searchName"
+                    class="form-control"
+                    value="{{search.name}}" />
+            </div>
+            <div class="form-group">
+                <label for="searchListPrice">
+                    Greater Than Price
+                </label>
+                <input type="text" 
+                    id="searchListPrice"
+                    name="searchListPrice"
+                    class="form-control"
+                    value="{{search.listPrice}}" />
+            </div>
+        </div>
+        <div class="card-footer bg-primary text-light">
+            <a href="product/add" class="btn btn-secondary">
+                Add
+            </a><button class="btn btn-success">
+                Search
+            </button>
+            <a href="/product" class="btn btn-secondary">
+                Reset
+            </a>
+        </div>
+    </div>
+</form>

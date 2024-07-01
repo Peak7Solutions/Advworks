@@ -1,0 +1,18 @@
+{
+  "name": "advworks",
+  "version": "1.0.0",
+  "description": "\"Adventure Works Website\"",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon -e mustache,js,html,json index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Roger Huff",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2",
+    "mustache-express": "^1.3.2",
+    "nodemon": "^3.1.4",
+    "tiny-json-http": "^7.5.1"
+  }
+}

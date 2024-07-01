@@ -1,0 +1,90 @@
+<div class="mt-4 row text-center">
+    <div class ="col">
+        <h2>Product Detail</h2>
+    </div>
+</div>
+
+{{#detail}}
+<form class="mt-4" action="/product" method="post">
+    <input type="hidden"
+            id="isAdding"
+            name="isAdding"
+            value="{{isAdding}}" />
+    <input type="hidden"
+            id="isListVisible"
+            name="isListVisible"
+            value="{{isListVisible}}" />
+    <input type="hidden"
+            id="productID"
+            name="productID"
+            value="{{productID}}" />
+
+    <div class="form-group">
+        <label for="name" class="form-label">
+            Product ID
+        </label>
+        <input type="text" readonly disabled
+                class="form-control"
+                value="{{productID}}" />
+    </div>
+    <div class="form-group">
+        <label for="name" class="form-label">
+            Product Name
+        </label>
+        <input type="text" 
+               id="name" 
+               name="name"
+               class="form-control" 
+               value="{{name}}" />
+    </div>
+    <div class="form-group">
+         <label for="productNumber" class="form-label">
+             Product Number
+        </label>
+        <input type="text" 
+               id="productNumber"
+               name="productNumber" 
+               class="form-control"
+               value="{{productNumber}}" />
+    </div>
+    <div class="form-group">
+         <label for="color" class="form-label">
+             Color
+        </label>
+        <input type="text" 
+               id="color" 
+               name="color"
+               class="form-control" 
+               value="{{color}}" />
+    </div>
+    <div class="form-group">
+        <label for="standardCost" class="form-label">
+            Cost
+        </label>
+        <input type="number" 
+               id="standardCost"
+               name="standardCost" 
+               class="form-control" 
+               value="{{standardCost}}" />
+        </div>
+    <div class="form-group">
+         <label for="listPrice" class="form-label">
+              Price
+         </label>
+         <input type="number" 
+                id="listPrice"
+                name="listPrice" 
+                class="form-control"
+                value="{{listPrice}}" />
+    </div>
+
+    <div class="mt-2 form-group">
+        <button class="btn btn-primary">
+            Save
+        </button>
+        <a href="/product" class="btn btn-primary">
+            Cancel
+        </a>
+    </div>
+</form>
+{{/detail}}
